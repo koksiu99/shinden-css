@@ -238,26 +238,20 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* =========================================================
    4.1 SEARCH INPUT & ACCORDION HEADERS
    ========================================================= */
-/* Wrapper Positioning Context */
 .input-wrapper {
   position: relative !important;
 }
 
-/* Search Bar Input Element */
+/* Base Input Element */
 .sidebar-wrapper .input-element {
-  background: rgba(12, 8, 20, 0.8) !important;
-  color: #ffffff !important; /* Typed text color */
+  background: rgba(12, 8, 20, 0.85) !important;
+  color: #ffffff !important;
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
-  padding: 10px 12px 10px 36px !important;
+  padding: 10px 12px 10px 38px !important;
   transition: all 0.2s ease !important;
   position: relative !important;
   z-index: 2 !important;
-}
-
-.sidebar-wrapper .input-element::placeholder {
-  color: #d1c4e9 !important;
-  opacity: 1 !important;
 }
 
 .sidebar-wrapper .input-element:focus {
@@ -266,7 +260,7 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   outline: none !important;
 }
 
-/* Search Input Decorative Container & Icon Layering */
+/* Background Layer containing Icon and Placeholder Text */
 .input-background {
   position: absolute !important;
   inset: 0 !important;
@@ -276,7 +270,7 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   align-items: center !important;
 }
 
-/* Magnifying Glass Icon Styling */
+/* Magnifying Glass Icon (Always Visible) */
 .input-icon {
   position: absolute !important;
   left: 10px !important;
@@ -284,7 +278,6 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   transform: translateY(-50%) !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
 }
 
 .input-icon svg,
@@ -295,12 +288,21 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.7)) !important;
 }
 
-/* Overlay Placeholder Text */
+/* Custom Overlay Placeholder (Visible when idle, hidden on focus/typing) */
 .input-placeholder {
   color: #d1c4e9 !important;
-  opacity: 0.9 !important;
   font-weight: 500 !important;
-  padding-left: 36px !important;
+  padding-left: 38px !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.15s ease !important;
+}
+
+/* Hide placeholder when input is focused or has a value */
+.input-wrapper:focus-within .input-placeholder,
+.input-element:focus + .input-background .input-placeholder,
+.input-element:not([value=""]) + .input-background .input-placeholder {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 /* Accordion Headers (Listy własne) */
