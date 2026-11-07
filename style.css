@@ -582,3 +582,92 @@ div[class*="-option"]--is-selected {
 .cell-tile-wrapper.hold        { border-left: 4px solid #eab308 !important; } /* Yellow */
 .cell-tile-wrapper.dropped     { border-left: 4px solid #ef4444 !important; } /* Red */
 .cell-tile-wrapper.plan        { border-left: 4px solid #3b82f6 !important; } /* Blue */
+
+/* =========================================================
+   7. TABLE LIST VIEW (DESKTOP ROWS & HEADERS)
+   ========================================================= */
+/* Table Header Bar */
+.table-header {
+  background: rgba(18, 10, 31, 0.9) !important;
+  border-bottom: 2px solid rgba(199, 125, 255, 0.3) !important;
+  border-radius: 8px 8px 0 0 !important;
+  padding: 8px 0 !important;
+}
+
+.table-header-title {
+  color: #c77dff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.05em !important;
+}
+
+.table-header-arrow {
+  fill: #8b79a5 !important;
+  transition: fill 0.2s ease !important;
+}
+
+.table-header:hover .table-header-arrow {
+  fill: #e0aaff !important;
+}
+
+/* Base Row Styling */
+.listRowDesktop-wrapper {
+  background: rgba(14, 9, 26, 0.6) !important;
+  border-bottom: 1px solid rgba(199, 125, 255, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.listRowDesktop-wrapper:hover {
+  background: rgba(199, 125, 255, 0.12) !important;
+  box-shadow: inset 0 0 10px rgba(132, 15, 173, 0.3) !important;
+}
+
+/* Row Title Link & Cell Text */
+.cellLink-link {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease !important;
+}
+
+.cellLink-link:hover {
+  color: #e0aaff !important;
+  text-shadow: 0 0 8px rgba(199, 125, 255, 0.6) !important;
+}
+
+.cellDefault-title,
+.cellProgress-title,
+.cellLink-title {
+  display: none !important; /* Hides duplicate inline headers in desktop table mode */
+}
+
+.cellDefault-value,
+.cellProgress-progress {
+  color: #d1c4e9 !important;
+  font-weight: 500 !important;
+}
+
+/* Options Three-Dot Menu Button */
+.cell-options-wrapper .dropdown-button {
+  background: transparent !important;
+  border: none !important;
+  color: #b8a7d1 !important;
+  transition: all 0.2s ease !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+}
+
+.cell-options-wrapper .dropdown-button:hover {
+  color: #ffffff !important;
+  background: rgba(199, 125, 255, 0.2) !important;
+  filter: drop-shadow(0 0 6px rgba(199, 125, 255, 0.8)) !important;
+}
+
+/* Status-based Left Border Indicators on Rows */
+.listRowDesktop-wrapper.in-progress { border-left: 3px solid #10b981 !important; }
+.listRowDesktop-wrapper.completed   { border-left: 3px solid #a855f7 !important; }
+.listRowDesktop-wrapper.skip        { border-left: 3px solid #9ca3af !important; }
+.listRowDesktop-wrapper.hold        { border-left: 3px solid #eab308 !important; }
+.listRowDesktop-wrapper.dropped     { border-left: 3px solid #ef4444 !important; }
+.listRowDesktop-wrapper.plan        { border-left: 3px solid #3b82f6 !important; }
