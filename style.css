@@ -676,14 +676,7 @@ div[class*="-option"]--is-selected {
    8. HOVER POPUP / COVER PREVIEW FIX (.rowTitleInfo-wrapper)
    ========================================================= */
 
-/* 2. Enable visibility & interactions ONLY when Shinden adds .is-visible */
-.rowTitleInfo-wrapper.is-visible {
-  pointer-events: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* 3. Theme styling for Popover Card Container */
+/* Popover Card Background & Outer Glow */
 .rowTitleInfo-inner {
   background: rgba(18, 10, 31, 0.95) !important;
   border: 1px solid rgba(199, 125, 255, 0.35) !important;
@@ -702,7 +695,7 @@ div[class*="-option"]--is-selected {
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
 }
 
-/* Ratings, Status, & Description Section Styling */
+/* Section Headers (Oceny tytułu, Status, Opis) */
 .ctr-header,
 .cts-header,
 .ctd-header {
@@ -713,18 +706,21 @@ div[class*="-option"]--is-selected {
   letter-spacing: 0.05em !important;
 }
 
+/* Base Data & Description Text */
 .ctr-list-title,
 .cts-value,
 .ctd-description {
   color: #d1c4e9 !important;
 }
 
+/* Rating Score Numbers */
 .ctr-list-ratio {
   color: #e0aaff !important;
   font-weight: 700 !important;
 }
 
+/* Status Field Color Highlight */
 .cts-status-value {
-  color: #10b981 !important; /* Green status highlight */
+  color: #10b981 !important; /* Soft emerald green */
   font-weight: 600 !important;
 }
