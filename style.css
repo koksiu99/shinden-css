@@ -298,9 +298,12 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.7)) !important;
 }
 
-/* Hide duplicate HTML overlay placeholder so it doesn't obstruct typed text */
+/* Overlay Placeholder Text */
 .input-placeholder {
-  display: none !important;
+  color: #d1c4e9 !important;
+  opacity: 0.9 !important;
+  font-weight: 500 !important;
+  padding-left: 36px !important;
 }
 
 /* Accordion Headers (Listy własne) */
