@@ -671,3 +671,69 @@ div[class*="-option"]--is-selected {
 .listRowDesktop-wrapper.hold        { border-left: 3px solid #eab308 !important; }
 .listRowDesktop-wrapper.dropped     { border-left: 3px solid #ef4444 !important; }
 .listRowDesktop-wrapper.plan        { border-left: 3px solid #3b82f6 !important; }
+
+/* =========================================================
+   8. HOVER POPUP / COVER PREVIEW FIX (.rowTitleInfo-wrapper)
+   ========================================================= */
+
+/* 1. Complete click-through & hide when popup is NOT active */
+.rowTitleInfo-wrapper {
+  pointer-events: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.2s ease, visibility 0.2s ease !important;
+  z-index: 99 !important;
+}
+
+/* 2. Enable visibility & interactions ONLY when Shinden adds .is-visible */
+.rowTitleInfo-wrapper.is-visible {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 3. Theme styling for Popover Card Container */
+.rowTitleInfo-inner {
+  background: rgba(18, 10, 31, 0.95) !important;
+  border: 1px solid rgba(199, 125, 255, 0.35) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85),
+              0 0 20px rgba(132, 15, 173, 0.35) !important;
+  color: #e2dbf0 !important;
+  padding: 12px !important;
+}
+
+/* Cover Image Frame */
+.rowTitleInfo-cover-background {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(199, 125, 255, 0.25) !important;
+}
+
+/* Ratings, Status, & Description Section Styling */
+.ctr-header,
+.cts-header,
+.ctd-header {
+  color: #c77dff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+}
+
+.ctr-list-title,
+.cts-value,
+.ctd-description {
+  color: #d1c4e9 !important;
+}
+
+.ctr-list-ratio {
+  color: #e0aaff !important;
+  font-weight: 700 !important;
+}
+
+.cts-status-value {
+  color: #10b981 !important; /* Green status highlight */
+  font-weight: 600 !important;
+}
