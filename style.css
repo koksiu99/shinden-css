@@ -238,18 +238,25 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* =========================================================
    4.1 SEARCH INPUT & ACCORDION HEADERS
    ========================================================= */
-/* Search Input Box */
+/* Wrapper Positioning Context */
+.input-wrapper {
+  position: relative !important;
+}
+
+/* Search Bar Input Element */
 .sidebar-wrapper .input-element {
   background: rgba(12, 8, 20, 0.8) !important;
-  color: #ffffff !important; /* Pure white typed text */
+  color: #ffffff !important; /* Typed text color */
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
   padding: 10px 12px 10px 36px !important;
   transition: all 0.2s ease !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 .sidebar-wrapper .input-element::placeholder {
-  color: #d1c4e9 !important; /* High contrast lavender placeholder */
+  color: #d1c4e9 !important;
   opacity: 1 !important;
 }
 
@@ -259,13 +266,41 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   outline: none !important;
 }
 
-.sidebar-wrapper .input-icon svg {
-  fill: #c77dff !important;
-  filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.6)) !important;
+/* Search Input Decorative Container & Icon Layering */
+.input-background {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 3 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.sidebar-wrapper .input-placeholder {
+/* Magnifying Glass Icon Styling */
+.input-icon {
+  position: absolute !important;
+  left: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.input-icon svg,
+.input-icon svg path {
+  fill: #c77dff !important;
+  color: #c77dff !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.7)) !important;
+}
+
+/* Overlay Placeholder Text */
+.input-placeholder {
   color: #d1c4e9 !important;
+  opacity: 0.9 !important;
+  font-weight: 500 !important;
+  padding-left: 36px !important;
 }
 
 /* Accordion Headers (Listy własne) */
@@ -348,8 +383,10 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 }
 
 /* Dropdown Indicators & Separators */
-.css-8mmkcg {
+.css-8mmkcg,
+.css-8mmkcg path {
   fill: #c77dff !important;
+  color: #c77dff !important;
 }
 
 .css-1okebmr-indicatorSeparator {
