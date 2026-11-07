@@ -238,27 +238,29 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* =========================================================
    4.1 SEARCH INPUT & ACCORDION HEADERS
    ========================================================= */
-/* Wrapper Container Positioning */
+/* Search Input Box */
+/* Wrapper Positioning Context */
 .input-wrapper {
   position: relative !important;
-  background: transparent !important;
 }
 
-/* Search Input Element (Highest z-index so text & cursor stay on top) */
+/* Search Bar Input Element */
 .sidebar-wrapper .input-element {
-  background: rgba(12, 8, 20, 0.85) !important;
-  color: #ffffff !important;
+  background: rgba(12, 8, 20, 0.8) !important;
+  color: #ffffff !important; /* Pure white typed text */
+  color: #ffffff !important; /* Typed text color */
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
-  padding: 10px 12px 10px 38px !important; /* Extra left padding so text never overlaps icon */
+  padding: 10px 12px 10px 36px !important;
   transition: all 0.2s ease !important;
   position: relative !important;
-  z-index: 5 !important;
+  z-index: 2 !important;
 }
 
 .sidebar-wrapper .input-element::placeholder {
+  color: #d1c4e9 !important; /* High contrast lavender placeholder */
   color: #d1c4e9 !important;
-  opacity: 0.8 !important;
+  opacity: 1 !important;
 }
 
 .sidebar-wrapper .input-element:focus {
@@ -267,24 +269,23 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   outline: none !important;
 }
 
-/* Background Container (Behind the input element) */
+.sidebar-wrapper .input-icon svg {
+/* Search Input Decorative Container & Icon Layering */
 .input-background {
   position: absolute !important;
   inset: 0 !important;
   pointer-events: none !important;
-  z-index: 1 !important; /* Keeps icon beneath typed text overlay */
+  z-index: 3 !important;
   display: flex !important;
   align-items: center !important;
 }
 
-/* Icon Positioned Absolute & Above Input Background */
+/* Magnifying Glass Icon Styling */
 .input-icon {
   position: absolute !important;
   left: 10px !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
-  z-index: 6 !important; /* Displays above input without intercepting clicks */
-  pointer-events: none !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -293,11 +294,13 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 .input-icon svg,
 .input-icon svg path {
   fill: #c77dff !important;
+  filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.6)) !important;
   color: #c77dff !important;
   opacity: 1 !important;
   filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.7)) !important;
 }
 
+.sidebar-wrapper .input-placeholder {
 /* Overlay Placeholder Text */
 .input-placeholder {
   color: #d1c4e9 !important;
