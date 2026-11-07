@@ -680,9 +680,19 @@ div[class*="-option"]--is-selected {
 .rowTitleInfo-wrapper {
   position: fixed !important;
   top: 50% !important;
-  right: 24px !important; /* Positions it nicely on the right side of your screen */
+  left: auto !important;
+  right: 40px !important;
   transform: translateY(-50%) !important;
-  z-index: 9999 !important;
+  margin: 0 !important;
+  z-index: 99999 !important;
+}
+
+/* Ensure inner card inherits the fixed positioning box cleanly */
+.rowTitleInfo-inner {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: none !important;
 }
 
 /* 2. Enable visibility & interactions ONLY when Shinden adds .is-visible */
