@@ -676,25 +676,6 @@ div[class*="-option"]--is-selected {
    8. HOVER POPUP / COVER PREVIEW FIX (.rowTitleInfo-wrapper)
    ========================================================= */
 
-/* 1. Complete click-through & hide when popup is NOT active */
-.rowTitleInfo-wrapper {
-  position: fixed !important;
-  top: 50% !important;
-  left: auto !important;
-  right: 40px !important;
-  transform: translateY(-50%) !important;
-  margin: 0 !important;
-  z-index: 99999 !important;
-}
-
-/* Ensure inner card inherits the fixed positioning box cleanly */
-.rowTitleInfo-inner {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  transform: none !important;
-}
-
 /* 2. Enable visibility & interactions ONLY when Shinden adds .is-visible */
 .rowTitleInfo-wrapper.is-visible {
   pointer-events: auto !important;
