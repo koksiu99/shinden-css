@@ -238,7 +238,6 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* =========================================================
    4.1 SEARCH INPUT & ACCORDION HEADERS
    ========================================================= */
-/* Search Input Box */
 /* Wrapper Positioning Context */
 .input-wrapper {
   position: relative !important;
@@ -247,7 +246,6 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* Search Bar Input Element */
 .sidebar-wrapper .input-element {
   background: rgba(12, 8, 20, 0.8) !important;
-  color: #ffffff !important; /* Pure white typed text */
   color: #ffffff !important; /* Typed text color */
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
@@ -258,7 +256,6 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 }
 
 .sidebar-wrapper .input-element::placeholder {
-  color: #d1c4e9 !important; /* High contrast lavender placeholder */
   color: #d1c4e9 !important;
   opacity: 1 !important;
 }
@@ -269,7 +266,6 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   outline: none !important;
 }
 
-.sidebar-wrapper .input-icon svg {
 /* Search Input Decorative Container & Icon Layering */
 .input-background {
   position: absolute !important;
@@ -294,13 +290,11 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 .input-icon svg,
 .input-icon svg path {
   fill: #c77dff !important;
-  filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.6)) !important;
   color: #c77dff !important;
   opacity: 1 !important;
   filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.7)) !important;
 }
 
-.sidebar-wrapper .input-placeholder {
 /* Overlay Placeholder Text */
 .input-placeholder {
   color: #d1c4e9 !important;
