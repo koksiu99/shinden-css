@@ -54,12 +54,11 @@ body.shinden-list {
   background: linear-gradient(to bottom, rgba(12, 8, 20, 0.2), #0c0814) !important;
 }
 
-/* =========================================================
-   4. SIDEBAR & COLORED LIST ICONS
-   ========================================================= */
-/* =========================================================
+/* 
+   =========================================================
    4. SIDEBAR & COLORED LIST ICONS & ACTIVE TAB GRADIENTS
-   ========================================================= */
+   =========================================================
+*/
 .sidebar-wrapper {
   background: rgba(22, 14, 38, 0.7) !important;
   border: 1px solid rgba(199, 125, 255, 0.2) !important;
@@ -237,6 +236,219 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   background: rgba(199, 125, 255, 0.3) !important;
   color: #f3e8ff !important;
   border-color: rgba(199, 125, 255, 0.5) !important;
+}
+
+/* =========================================================
+   4.1 SEARCH INPUT & ACCORDION HEADERS
+   ========================================================= */
+/* Search Bar Container */
+.sidebar-wrapper .input-element {
+  background: rgba(12, 8, 20, 0.8) !important;
+  color: #e2dbf0 !important;
+  border: 1px solid rgba(199, 125, 255, 0.25) !important;
+  border-radius: 8px !important;
+  padding: 10px 12px 10px 36px !important;
+  transition: all 0.2s ease !important;
+}
+
+.sidebar-wrapper .input-element:focus {
+  border-color: #c77dff !important;
+  box-shadow: 0 0 12px rgba(199, 125, 255, 0.4) !important;
+  outline: none !important;
+}
+
+.sidebar-wrapper .input-icon svg {
+  fill: #c77dff !important;
+  filter: drop-shadow(0 0 4px rgba(199, 125, 255, 0.6)) !important;
+}
+
+.sidebar-wrapper .input-placeholder {
+  color: #8b79a5 !important;
+}
+
+/* Accordion Headers (Listy własne) */
+.accordion-wrapper--sidebar .MuiPaper-root {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-wrapper--sidebar .MuiAccordionSummary-root {
+  background: rgba(132, 15, 173, 0.15) !important;
+  border: 1px solid rgba(199, 125, 255, 0.2) !important;
+  border-radius: 8px !important;
+  color: #c77dff !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.accordion-wrapper--sidebar .MuiAccordionSummary-root:hover {
+  background: rgba(199, 125, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.accordion-wrapper--sidebar .accordion-icon {
+  stroke: #c77dff !important;
+}
+
+.customListManageLink-link {
+  color: #d1c4e9 !important;
+  transition: color 0.2s ease !important;
+}
+
+.customListManageLink-link:hover {
+  color: #e0aaff !important;
+}
+
+.customListManageLink-icon {
+  fill: #c77dff !important;
+}
+
+/* =========================================================
+   4.2 DROPDOWNS (REACT-SELECT) & FILTERS
+   ========================================================= */
+/* Select Container Control */
+.custom-dropdown-control,
+.custom-async-dropdown .custom-dropdown-control {
+  background: rgba(12, 8, 20, 0.8) !important;
+  border: 1px solid rgba(199, 125, 255, 0.25) !important;
+  border-radius: 8px !important;
+  color: #e2dbf0 !important;
+  min-height: 38px !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-dropdown-control:hover,
+.custom-dropdown-control--is-focused {
+  border-color: #c77dff !important;
+  box-shadow: 0 0 10px rgba(199, 125, 255, 0.3) !important;
+}
+
+/* Text Placeholders & Indicators */
+.css-r6er38-placeholder, 
+.css-1wa3eu0-placeholder {
+  color: #8b79a5 !important;
+  font-size: 13px !important;
+}
+
+.css-8mmkcg {
+  fill: #c77dff !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  background-color: rgba(199, 125, 255, 0.2) !important;
+}
+
+/* React Select Popover Menu Options */
+div[class*="-menu"] {
+  background: rgba(18, 10, 31, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(199, 125, 255, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+  z-index: 100 !important;
+}
+
+div[class*="-option"] {
+  color: #d1c4e9 !important;
+  background: transparent !important;
+  transition: all 0.15s ease !important;
+}
+
+div[class*="-option"]:hover,
+div[class*="-option"]--is-focused {
+  background: rgba(199, 125, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+div[class*="-option"]--is-selected {
+  background: rgba(132, 15, 173, 0.5) !important;
+  color: #e0aaff !important;
+}
+
+/* Checkbox & Clear Filter Controls */
+.checkbox-label-text {
+  color: #b8a7d1 !important;
+  font-size: 13px !important;
+}
+
+.checkbox-input[type="checkbox"] {
+  accent-color: #c77dff !important;
+}
+
+.clearAll-btn {
+  color: #8b79a5 !important;
+  transition: color 0.2s ease !important;
+}
+
+.clearAll-btn:not(.is-disabled):hover {
+  color: #ef4444 !important;
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6) !important;
+}
+
+.advanced-tags-btn {
+  background: rgba(132, 15, 173, 0.2) !important;
+  border: 1px solid rgba(199, 125, 255, 0.25) !important;
+  border-radius: 6px !important;
+  color: #c77dff !important;
+  transition: all 0.2s ease !important;
+}
+
+.advanced-tags-btn:hover {
+  background: rgba(199, 125, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   4.3 PREMIERE RANGE SLIDER & MANUAL CHANGER
+   ========================================================= */
+.custom-slider-wrapper .MuiSlider-root {
+  color: #c77dff !important;
+  padding: 13px 0 !important;
+}
+
+.custom-slider-wrapper .MuiSlider-rail {
+  background-color: rgba(199, 125, 255, 0.2) !important;
+  opacity: 1 !important;
+  height: 4px !important;
+}
+
+.custom-slider-wrapper .MuiSlider-track {
+  background: linear-gradient(90deg, #840fad, #c77dff) !important;
+  height: 4px !important;
+  box-shadow: 0 0 8px rgba(199, 125, 255, 0.5) !important;
+}
+
+.custom-slider-wrapper .MuiSlider-thumb {
+  background-color: #e0aaff !important;
+  border: 2px solid #840fad !important;
+  box-shadow: 0 0 10px rgba(199, 125, 255, 0.8) !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-top: -6px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.custom-slider-wrapper .MuiSlider-thumb:hover,
+.custom-slider-wrapper .MuiSlider-thumb.Mui-focusVisible {
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 14px rgba(224, 170, 255, 1) !important;
+}
+
+.custom-slider-wrapper .MuiSlider-valueLabel {
+  color: #e0aaff !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+.premiereManualChanger-cta {
+  color: #8b79a5 !important;
+  font-size: 12px !important;
+  transition: color 0.2s ease !important;
+}
+
+.premiereManualChanger-cta:hover {
+  color: #c77dff !important;
+  cursor: pointer !important;
 }
 
 /* =========================================================
