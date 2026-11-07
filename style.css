@@ -54,11 +54,9 @@ body.shinden-list {
   background: linear-gradient(to bottom, rgba(12, 8, 20, 0.2), #0c0814) !important;
 }
 
-/* 
-   =========================================================
-   4. SIDEBAR & COLORED LIST ICONS & ACTIVE TAB GRADIENTS
-   =========================================================
-*/
+/* =========================================================
+   4. SIDEBAR CONTAINER & BASE LIST ITEMS
+   ========================================================= */
 .sidebar-wrapper {
   background: rgba(22, 14, 38, 0.7) !important;
   border: 1px solid rgba(199, 125, 255, 0.2) !important;
@@ -78,7 +76,6 @@ body.shinden-list {
   margin-bottom: 12px !important;
 }
 
-/* Base button styles */
 .sidebar-list-item a {
   color: #b8a7d1 !important;
   border-radius: 8px !important;
@@ -241,14 +238,19 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 /* =========================================================
    4.1 SEARCH INPUT & ACCORDION HEADERS
    ========================================================= */
-/* Search Bar Container */
+/* Search Input Box */
 .sidebar-wrapper .input-element {
   background: rgba(12, 8, 20, 0.8) !important;
-  color: #e2dbf0 !important;
+  color: #ffffff !important; /* Pure white typed text */
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
   padding: 10px 12px 10px 36px !important;
   transition: all 0.2s ease !important;
+}
+
+.sidebar-wrapper .input-element::placeholder {
+  color: #d1c4e9 !important; /* High contrast lavender placeholder */
+  opacity: 1 !important;
 }
 
 .sidebar-wrapper .input-element:focus {
@@ -263,7 +265,7 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 }
 
 .sidebar-wrapper .input-placeholder {
-  color: #8b79a5 !important;
+  color: #d1c4e9 !important;
 }
 
 /* Accordion Headers (Listy własne) */
@@ -304,7 +306,7 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
 }
 
 /* =========================================================
-   4.2 DROPDOWNS (REACT-SELECT) & FILTERS
+   4.2 DROPDOWNS (REACT-SELECT) & FILTER CONTROLS
    ========================================================= */
 /* Select Container Control */
 .custom-dropdown-control,
@@ -312,7 +314,7 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   background: rgba(12, 8, 20, 0.8) !important;
   border: 1px solid rgba(199, 125, 255, 0.25) !important;
   border-radius: 8px !important;
-  color: #e2dbf0 !important;
+  color: #ffffff !important;
   min-height: 38px !important;
   transition: all 0.2s ease !important;
 }
@@ -323,13 +325,29 @@ ul.sidebar-list-wrapper li.sidebar-list-item a[href*="/all"].is-active .sidebar-
   box-shadow: 0 0 10px rgba(199, 125, 255, 0.3) !important;
 }
 
-/* Text Placeholders & Indicators */
-.css-r6er38-placeholder, 
-.css-1wa3eu0-placeholder {
-  color: #8b79a5 !important;
-  font-size: 13px !important;
+/* Input text when typing inside search filter dropdowns */
+.custom-dropdown-control input,
+.custom-async-dropdown .custom-dropdown-control input {
+  color: #ffffff !important;
 }
 
+/* Active selected value text inside dropdown container */
+.custom-dropdown-control [class*="-singleValue"],
+.custom-async-dropdown .custom-dropdown-control [class*="-singleValue"] {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+/* Dropdown Placeholders ("Tag...", "Typ...", "Status...", etc.) */
+.css-r6er38-placeholder, 
+.css-1wa3eu0-placeholder,
+.custom-dropdown-control [class*="-placeholder"] {
+  color: #d1c4e9 !important;
+  font-weight: 500 !important;
+  opacity: 0.9 !important;
+}
+
+/* Dropdown Indicators & Separators */
 .css-8mmkcg {
   fill: #c77dff !important;
 }
@@ -349,7 +367,7 @@ div[class*="-menu"] {
 }
 
 div[class*="-option"] {
-  color: #d1c4e9 !important;
+  color: #ffffff !important;
   background: transparent !important;
   transition: all 0.15s ease !important;
 }
@@ -362,12 +380,13 @@ div[class*="-option"]--is-focused {
 
 div[class*="-option"]--is-selected {
   background: rgba(132, 15, 173, 0.5) !important;
-  color: #e0aaff !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
 }
 
 /* Checkbox & Clear Filter Controls */
 .checkbox-label-text {
-  color: #b8a7d1 !important;
+  color: #d1c4e9 !important;
   font-size: 13px !important;
 }
 
@@ -376,7 +395,7 @@ div[class*="-option"]--is-selected {
 }
 
 .clearAll-btn {
-  color: #8b79a5 !important;
+  color: #b8a7d1 !important;
   transition: color 0.2s ease !important;
 }
 
@@ -441,7 +460,7 @@ div[class*="-option"]--is-selected {
 }
 
 .premiereManualChanger-cta {
-  color: #8b79a5 !important;
+  color: #d1c4e9 !important;
   font-size: 12px !important;
   transition: color 0.2s ease !important;
 }
