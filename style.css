@@ -678,11 +678,11 @@ div[class*="-option"]--is-selected {
 
 /* 1. Complete click-through & hide when popup is NOT active */
 .rowTitleInfo-wrapper {
-  pointer-events: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.2s ease, visibility 0.2s ease !important;
-  z-index: 99 !important;
+  position: fixed !important;
+  top: 50% !important;
+  right: 24px !important; /* Positions it nicely on the right side of your screen */
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
 }
 
 /* 2. Enable visibility & interactions ONLY when Shinden adds .is-visible */
