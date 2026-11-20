@@ -548,11 +548,9 @@ div[class*="-option"]--is-selected {
    ========================================================= */
 .cell-tile-wrapper {
   background: rgba(14, 9, 26, 0.9) !important;
-  border: 1px solid rgba(199, 125, 255, 0.2) !important;
   border-radius: 10px !important;
   overflow: hidden !important;
   transition: all 0.25s ease-in-out !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 .cell-tile-title {
