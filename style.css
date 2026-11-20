@@ -555,12 +555,6 @@ div[class*="-option"]--is-selected {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-.cell-tile-wrapper:hover {
-  transform: translateY(-4px) !important;
-  border-color: #c77dff !important;
-  box-shadow: 0 8px 20px rgba(132, 15, 173, 0.4) !important;
-}
-
 .cell-tile-title {
   color: #ffffff !important;
   font-weight: 600 !important;
@@ -574,14 +568,6 @@ div[class*="-option"]--is-selected {
   padding: 2px 6px !important;
   font-weight: 700 !important;
 }
-
-/* Status Border Accents on Cards */
-.cell-tile-wrapper.in-progress { border-left: 4px solid #10b981 !important; } /* Green */
-.cell-tile-wrapper.completed   { border-left: 4px solid #a855f7 !important; } /* Purple */
-.cell-tile-wrapper.skip        { border-left: 4px solid #9ca3af !important; } /* Grey */
-.cell-tile-wrapper.hold        { border-left: 4px solid #eab308 !important; } /* Yellow */
-.cell-tile-wrapper.dropped     { border-left: 4px solid #ef4444 !important; } /* Red */
-.cell-tile-wrapper.plan        { border-left: 4px solid #3b82f6 !important; } /* Blue */
 
 /* =========================================================
    7. TABLE LIST VIEW (DESKTOP ROWS & HEADERS)
