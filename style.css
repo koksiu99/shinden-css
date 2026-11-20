@@ -457,59 +457,6 @@ div[class*="-option"]--is-selected {
 }
 
 /* =========================================================
-   4.3 PREMIERE RANGE SLIDER & MANUAL CHANGER
-   ========================================================= */
-.custom-slider-wrapper .MuiSlider-root {
-  color: #c77dff !important;
-  padding: 13px 0 !important;
-}
-
-.custom-slider-wrapper .MuiSlider-rail {
-  background-color: rgba(199, 125, 255, 0.2) !important;
-  opacity: 1 !important;
-  height: 4px !important;
-}
-
-.custom-slider-wrapper .MuiSlider-track {
-  background: linear-gradient(90deg, #840fad, #c77dff) !important;
-  height: 4px !important;
-  box-shadow: 0 0 8px rgba(199, 125, 255, 0.5) !important;
-}
-
-.custom-slider-wrapper .MuiSlider-thumb {
-  background-color: #e0aaff !important;
-  border: 2px solid #840fad !important;
-  box-shadow: 0 0 10px rgba(199, 125, 255, 0.8) !important;
-  width: 16px !important;
-  height: 16px !important;
-  margin-top: -6px !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.custom-slider-wrapper .MuiSlider-thumb:hover,
-.custom-slider-wrapper .MuiSlider-thumb.Mui-focusVisible {
-  transform: scale(1.2) !important;
-  box-shadow: 0 0 14px rgba(224, 170, 255, 1) !important;
-}
-
-.custom-slider-wrapper .MuiSlider-valueLabel {
-  color: #e0aaff !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-}
-
-.premiereManualChanger-cta {
-  color: #d1c4e9 !important;
-  font-size: 12px !important;
-  transition: color 0.2s ease !important;
-}
-
-.premiereManualChanger-cta:hover {
-  color: #c77dff !important;
-  cursor: pointer !important;
-}
-
-/* =========================================================
    5. MAIN CONTENT AREA & HEADER
    ========================================================= */
 .view-content-wrapper {
